@@ -2,25 +2,25 @@ body {
   margin: 0px;
 }
 
-.ol {
+ol {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
 }
-/*Carusell*/
-.carusell {
+
+/* Carousel */
+.carousel {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-/*Controll Panel*/
-.carusell > div {
+/* Control Panel */
+.carousel > div {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -36,28 +36,26 @@ body {
   grid-row: 2/3;
 }
 
-#spesific-button {
+#specific-button {
   grid-column: 2/3;
   grid-row: 3/4;
   align-self: end;
   justify-self: center;
 }
 
-.carusell > ol {
+.carousel > ol {
   display: flex;
   justify-content: center;
-
   width: 100vw;
   overflow: hidden;
   background-color: black;
 }
 
-.carusell img {
+.carousel img {
   height: 100vh;
   display: none;
 }
 
-.carusell img.current-image {
+.carousel img.current-image {
   display: unset;
-
 }

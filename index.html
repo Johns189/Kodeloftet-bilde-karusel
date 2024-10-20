@@ -10,10 +10,10 @@
   </head>
   <body>
 
-    <!--Container for the image carusel-->
-    <div class="carusell">
+    <!--Container for the image carousel-->
+    <div class="carousel">
 
-        <!-- Controller plane-->
+        <!-- Control Panel -->
         <div>
           <button id="next-button">
             <svg
@@ -47,8 +47,8 @@
               />
             </svg>
           </button>
-          <!--Spesific buttons-->
-          <div id="spesific-button">
+          <!-- Specific buttons -->
+          <div id="specific-button">
             <button data-image="images/behind-waterfall.jpg">1</button>
             <button data-image="images/forest.jpg">2</button>
             <button data-image="images/tiny-lake.jpg">3</button>
@@ -56,12 +56,25 @@
           </div>
         </div>
 
-          <!--Image reel-->
-          <ol>
-            <li><img id="main-image" class="current-image" src="images/behind-waterfall.jpg" alt="Image carusel"/></li>
-          </ol>
-          
-
+        <!-- Image reel -->
+        <ol>
+          <li><img id="main-image" class="current-image" src="images/behind-waterfall.jpg" alt="Image carousel" /></li>
+        </ol>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll("#specific-button button");
+        const mainImage = document.getElementById("main-image");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const newImageSrc = button.getAttribute("data-image");
+            mainImage.src = newImageSrc;
+          });
+        });
+      });
+    </script>
+
   </body>
 </html>
