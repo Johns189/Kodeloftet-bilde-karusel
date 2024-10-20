@@ -61,20 +61,5 @@
           <li><img id="main-image" class="current-image" src="images/behind-waterfall.jpg" alt="Image carousel" /></li>
         </ol>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll("#specific-button button");
-        const mainImage = document.getElementById("main-image");
-
-        buttons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const newImageSrc = button.getAttribute("data-image");
-            mainImage.src = newImageSrc;
-          });
-        });
-      });
-    </script>
-
   </body>
 </html>
