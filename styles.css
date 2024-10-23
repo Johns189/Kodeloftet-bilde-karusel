@@ -29,6 +29,7 @@ ol {
 #next-button {
   grid-column: 3/4;
   grid-row: 2/3;
+  justify-self: end;
   width: 40px;
   height: 40px;
   padding: 5px;
