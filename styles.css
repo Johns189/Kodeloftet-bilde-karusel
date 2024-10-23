@@ -25,7 +25,7 @@ ol {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/*Padding på next og previous knappene har forskjelig px, 
+/*Padding på next og previous knappene har forskjellig px, 
 men det var det som så best ut*/
 #next-button {
   background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
@@ -39,7 +39,7 @@ men det var det som så best ut*/
   height: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   padding: 3px;
 }
 
@@ -61,13 +61,13 @@ men det var det som så best ut*/
   height: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.3 ease;
-  padding: 5px;
+  transition: all 0.2s ease;
+  padding: 2px;
 }
 
 #previous-button svg {
-  width: 25;
-  height: 25;
+  width: 25px;
+  height: 25px;
 }
 
 #next-button:hover, #previous-button:hover {
@@ -77,10 +77,24 @@ men det var det som så best ut*/
 }
 
 #specific-button {
+  display: flex;
+  gap: 10px;
   grid-column: 2/3;
   grid-row: 3/4;
   align-self: end;
   justify-self: center;
+}
+
+#specific-button button {
+  background: linear-gradient(135deg, #2e8b57 0%, #6b8e23 100%);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .carousel > ol {
