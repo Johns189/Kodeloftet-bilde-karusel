@@ -18,7 +18,6 @@ ol {
 /* Control Panel */
 .carousel > div {
   position: absolute;
-  z-index: 1;
   width: 100%;
   height: 100%;
   display: grid;
@@ -26,13 +25,22 @@ ol {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+/*Padding på next og previous knappene har forskjelig px, 
+men det var det som så best ut*/
 #next-button {
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+  border: none;
+  color: white;
+  border-radius: 50%;
   grid-column: 3/4;
   grid-row: 2/3;
   justify-self: end;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 3px;
 }
 
 #next-button svg {
@@ -42,16 +50,30 @@ ol {
 
 
 #previous-button {
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+  border: none;
+  color: white;
+  border-radius: 50%;
   grid-column: 1/2;
   grid-row: 2/3;
-  width: 40px;
-  height: 40px;
+  justify-self: start;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3 ease;
   padding: 5px;
 }
 
 #previous-button svg {
   width: 25;
   height: 25;
+}
+
+#next-button:hover, #previous-button:hover {
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 #specific-button {
